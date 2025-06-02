@@ -1,9 +1,6 @@
-def all_thing_is_obj(obj):
+def all_thing_is_obj(obj) -> int:
 	if type(obj) == str:
-		if obj == "Brian":
-			print(f"Brian is in the kitchen : {type(obj)}")
-		else:
-			print(f"{type(obj).__name__} : {type(obj)}")
+		print(f"{obj} is in the kitchen : {type(obj)}")
 	elif type(obj) == list \
 		or type(obj) == tuple \
 		or type(obj) == set \
