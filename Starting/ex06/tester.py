@@ -15,6 +15,8 @@ def main():
     print(ft_filter.__doc__)
     if filter.__doc__ != ft_filter.__doc__:
         print("Differences between __doc__ strings")
+
+    print(filter(42, [1, 2, 3, 4]))
     array = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10]
     print("Original array:", array)
     filtered = ft_filter(lambda x: x % 2 == 0, array)

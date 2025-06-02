@@ -2,9 +2,7 @@ def main():
     ft_list = ["Hello", "tata!"]
     ft_tuple = ("Hello", "toto!")
     ft_set = {"Hello", "tutu!"}
-    ft_dict = {"Hello" : "titi!"}
-
-    #your code here
+    ft_dict = {"Hello": "titi!"}
 
     ft_list[1] = "World!"
     ft_tuple = (ft_tuple[0], "France!")
@@ -17,6 +15,6 @@ def main():
     print(ft_set)
     print(ft_dict)
 
+
 if __name__ == "__main":
     main()
-

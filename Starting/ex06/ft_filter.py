@@ -7,7 +7,7 @@ is true. If function is None, return the items that are true."""
     if function is None:
         function = bool
     elif not callable(function):
-        raise TypeError("function must be callable")
+        raise TypeError(f"'{type(function).__name__}' object is not callable")
     for item in iterable:
         if function(item):
             yield item

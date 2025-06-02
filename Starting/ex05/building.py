@@ -2,7 +2,7 @@ from sys import argv, stdin
 
 
 def main():
-    #  Add the parent directory to the system path
+    """Main function to analyze the input text and count character types."""
     arg = ""
     if len(argv) > 2:
         print("AssertionError: more than one argument are provided")
@@ -21,7 +21,7 @@ def main():
             upper += 1
         elif char.islower():
             lower += 1
-        elif char in "!\"#$%&'()*+,-./:;<=>?@[\]^_`{|}~":
+        elif char in "!\"#$%&'()*+,-./:;<=>?@[\\]^_`{|}~":
             ponctuation += 1
         elif char.isspace():
             spaces += 1
