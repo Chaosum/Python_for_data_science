@@ -10,6 +10,7 @@ def main():
     elif len(argv) == 2:
         arg = argv[1]
     elif len(argv) == 1:
+        print("What is the text to count?")
         arg = stdin.readline()
     upper = 0
     lower = 0

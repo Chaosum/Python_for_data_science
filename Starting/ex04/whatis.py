@@ -13,5 +13,5 @@ def main():
             print("AssertionError: argument is not an integer")
 
 
-if __name__ == "__main":
+if __name__ == "__main__":
     main()
