@@ -1,5 +1,5 @@
 from PIL import Image, UnidentifiedImageError
-import numpy as np
+from numpy import ndarray as np
 
 
 def ft_load(path: str) -> np.ndarray:
