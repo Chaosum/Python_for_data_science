@@ -9,9 +9,7 @@ def ft_load(path: str) -> np.ndarray:
         path (str): The path to the image file.
     Returns:
         np.ndarray: The image as a NumPy array with shape (H, W, 3).
-    Raises:
-        FileNotFoundError: If the image file does not exist.
-        ValueError: If the image format is not supported (not JPEG or JPG).
+        None if the image cannot be loaded.
     """
     try:
         with Image.open(path) as img:
@@ -21,6 +19,9 @@ def ft_load(path: str) -> np.ndarray:
             array = np.array(img)
             print("The shape of image is:", array.shape)
             return array
+    except ValueError as e:
+        print(f"Value error: {e}")
+        return None
     except FileNotFoundError:
         print(f"File not found: {path}")
         return None
