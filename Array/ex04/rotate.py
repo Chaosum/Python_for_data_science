@@ -1,3 +1,4 @@
+from PIL import UnidentifiedImageError
 from matplotlib import pyplot as plt
 from load_image import ft_load
 
@@ -35,6 +36,18 @@ def main():
         img = ft_load("animal.jpeg")
     except ValueError as e:
         print("Value Error occurred:", e)
+        return
+    except FileNotFoundError as e:
+        print("File Not Found Error occurred:", e)
+        return
+    except UnidentifiedImageError as e:
+        print("Unidentified Image Error occurred:", e)
+        return
+    except Exception as e:
+        print("An unexpected error occurred:", e)
+        return
+    if img is None:
+        print("The image could not be loaded.")
         return
     img = img[100:500, 450:850, 0]
     rotated_matrix = rotate_matrix_90(img)

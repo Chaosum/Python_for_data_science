@@ -12,6 +12,9 @@ def main():
 
     try:
         img = ft_load("animal.jpeg")
+        if img is None:
+            print("The image could not be loaded.")
+            return
         print(img)
         zoomed = img[100:500, 450:850, 0]  # 0 1 ou 2 pour R G ou B
         print("New shape after slicing:", zoomed.shape)
@@ -22,13 +25,14 @@ def main():
         print("Value Error occurred:", e)
         return
     except FileNotFoundError as e:
-        print("File Not Found:", e)
+        print("File Not Found Error occurred:", e)
         return
     except UnidentifiedImageError as e:
-        print("Unidentified Image Error:", e)
+        print("Unidentified Image Error occurred:", e)
+        return
     except Exception as e:
-        print(f"An error occurred: {e}")
-    return
+        print("An unexpected error occurred:", e)
+        return
 
 
 if __name__ == "__main__":
