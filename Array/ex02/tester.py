@@ -14,16 +14,16 @@ def main():
         print(ft_load("non_existent_file.jpg"))
         print(ft_load("tester.py"))
     except ValueError as e:
-        print("Value Error occurred:", e)
+        print("Value Error :", e)
         return
     except FileNotFoundError as e:
-        print("File Not Found Error occurred:", e)
+        print("File Not Found Error :", e)
         return
     except UnidentifiedImageError as e:
-        print("Unidentified Image Error occurred:", e)
+        print("Unidentified Image Error :", e)
         return
     except Exception as e:
-        print("An unexpected error occurred:", e)
+        print("An unexpected error :", e)
         return
 
 
