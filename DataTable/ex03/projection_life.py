@@ -103,6 +103,7 @@ def main():
         plt.ylabel("Life Expectancy")
         plt.xlabel("Gross domestic product")
         plt.xscale("log")
+        plt.xticks([300, 1000, 10000])
         plt.gca().xaxis.set_major_formatter(FuncFormatter(millions_formatter))
         plt.show()
     except Exception as e:
