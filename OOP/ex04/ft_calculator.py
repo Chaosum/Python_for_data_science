@@ -1,6 +1,6 @@
 class calculator:
 
-    @classmethod
+    @staticmethod
     def dotproduct(V1: list[float], V2: list[float]) -> None:
         """Calculate the dot product of two vectors."""
         # if not isinstance(V1, list) or not isinstance(V2, list):
@@ -13,7 +13,7 @@ class calculator:
         print(f"Dot product is : {sum(x * y for x, y in zip(V1, V2))}")
         return
 
-    @classmethod
+    @staticmethod
     def add_vec(V1: list[float], V2: list[float]) -> None:
         """Add two vectors element-wise."""
         # if not isinstance(V1, list) or not isinstance(V2, list):
@@ -26,7 +26,7 @@ class calculator:
         print(f"Add Vectors is : {[x + y for x, y in zip(V1, V2)]}")
         return
 
-    @classmethod
+    @staticmethod
     def sous_vec(V1: list[float], V2: list[float]) -> None:
         """Subtracts two vectors element-wise."""
         # if not isinstance(V1, list) or not isinstance(V2, list):

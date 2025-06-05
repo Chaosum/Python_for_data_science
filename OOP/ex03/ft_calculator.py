@@ -26,7 +26,7 @@ class calculator:
         """Subtract a number from matrice of shape 1,n."""
         # if not isinstance(object, (int, float)):
         #     raise TypeError("object must be a number")
-        new_array = [element * object for element in self.array]
+        new_array = [element - object for element in self.array]
         self.array = new_array
         print(self.array)
         return
