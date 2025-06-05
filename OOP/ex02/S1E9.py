@@ -11,8 +11,8 @@ class Character(ABC):
         self.is_alive = is_alive
 
     def die(self):
-        """Abstract method to kill the character"""
-        pass
+        """method to kill the character"""
+        self.is_alive = False
 
 
 class Stark(Character):
