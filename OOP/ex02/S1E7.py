@@ -14,10 +14,6 @@ Initialize the Baratheon character with a first name and alive status."""
         self.eyes = "brown"
         self.hairs = "dark"
 
-    def die(self):
-        """Kill the Baratheon character"""
-        self.is_alive = False
-
     def __str__(self):
         """Return a string representation of the Baratheon character."""
         return f"Vector: ('{self.family_name}', '{self.eyes}', '{self.hairs}')"
@@ -53,10 +49,6 @@ Initialize a Lannister character with a first name and alive status."""
         if not isinstance(is_alive, bool):
             raise TypeError("is_alive must be a boolean")
         return cls(first_name, is_alive)
-
-    def die(self):
-        """Kill the Lannister character"""
-        self.is_alive = False
 
     def __str__(self):
         """Return a string representation of the Lannister character."""

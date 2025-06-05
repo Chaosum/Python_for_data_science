@@ -11,10 +11,6 @@ Class representing a King that inherits from Baratheon and Lannister.\
         super().__init__(first_name, is_alive)
         self.title = "King"
 
-    def die(self):
-        """Kill the King character."""
-        self.is_alive = False
-
     def set_eyes(self, eyes: str):
         """Set the eye color of the King character."""
         if not isinstance(eyes, str):
